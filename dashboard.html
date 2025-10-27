@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - SITTA UT</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-dashboard">
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="assets/logo-ut.png" alt="logo" class="logo-large">
+      <div class="brand-block">
+        <div class="brand">SITTA - Pemesanan Bahan Ajar</div>
+        <div id="headerDate" class="header-date">--</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div id="userGreeting" class="greeting"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="stok.html">Informasi Bahan Ajar</a></li>
+        <li><a href="tracking.html">Tracking Pengiriman</a></li>
+        <li><a href="#">Laporan (Monitoring / Rekap)</a></li>
+        <li><a href="#" id="logoutLink">Keluar</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <h2 id="greetingLine">Halo</h2>
+
+      <section class="cards">
+        <article class="card small">
+          <h3>Informasi Bahan Ajar</h3>
+          <p>Lihat stok, tambah stok baru, dan kelola data bahan ajar.</p>
+          <a class="btn" href="stok.html">Buka</a>
+        </article>
+
+        <article class="card small">
+          <h3>Tracking Pengiriman</h3>
+          <p>Cari DO dan pantau status pengiriman.</p>
+          <a class="btn" href="tracking.html">Cari</a>
+        </article>
+
+        <article class="card small">
+          <h3>Histori Transaksi</h3>
+          <p>Riwayat pemesanan dan pengiriman.</p>
+          <a class="btn" href="#">Lihat</a>
+        </article>
+      </section>
+
+      <section>
+        <h3>Ringkasan Stok (sample)</h3>
+        <div id="stokPreview" class="grid-sample"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- untuk menampilkan hari & tanggal dalam format locale ID -->
+  <script>
+    (function(){
+      const el = document.getElementById('headerDate');
+      if(!el) return;
+      const days = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+      const months = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+      const now = new Date();
+      const dayName = days[now.getDay()];
+      const date = now.getDate();
+      const monthName = months[now.getMonth()];
+      const year = now.getFullYear();
+      el.textContent = `${dayName}, ${date} ${monthName} ${year}`;
+    })();
+  </script>
+</body>
+</html>

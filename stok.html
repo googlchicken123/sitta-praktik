@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stok Bahan Ajar - SITTA UT</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-stok">
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="assets/logo-ut.png" alt="logo" class="logo-large">
+      <div class="brand-block">
+        <div class="brand">Informasi Stok Bahan Ajar</div>
+        <div class="header-date" id="headerDate">—</div>
+      </div>
+    </div>
+    <div class="right">
+      <div id="userGreeting" class="greeting"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="stok.html">Informasi Bahan Ajar</a></li>
+        <li><a href="tracking.html">Tracking Pengiriman</a></li>
+        <li><a href="#">Laporan (Monitoring / Rekap)</a></li>
+        <li><a href="#" id="logoutLink">Keluar</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <section class="card">
+        <h2>Daftar Stok</h2>
+        <table id="stokTable" class="table">
+          <thead>
+            <tr>
+              <th>Kode Lokasi</th>
+              <th>Kode Barang</th>
+              <th>Nama Barang</th>
+              <th>Edisi</th>
+              <th>Stok</th>
+              <th>Cover</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h3>Tambah Stok Baru</h3>
+        <form id="addStokForm" class="stacked-form">
+          <input id="kodeLokasi" placeholder="Kode Lokasi (mis: 0JKT01)" required>
+          <input id="kodeBarang" placeholder="Kode Barang (mis: ASIP4301)" required>
+          <input id="namaBarang" placeholder="Nama Barang" required>
+          <input id="edisi" placeholder="Edisi" required>
+          <input id="stok" placeholder="Stok (angka)" type="number" required>
+          <input id="cover" placeholder="Path cover (mis: img/cover.jpg)" required>
+          <button type="submit" class="btn primary">Tambah</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // baris tanggal biar konsisten dengan dashboard
+    (function(){
+      const el = document.getElementById('headerDate'); if(!el) return;
+      const d=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+      const m=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+      const n=new Date(); el.textContent=`${d[n.getDay()]}, ${n.getDate()} ${m[n.getMonth()]} ${n.getFullYear()}`;
+    })();
+  </script>
+</body>
+</html>

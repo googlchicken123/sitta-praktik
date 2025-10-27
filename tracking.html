@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tracking - SITTA UT</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-tracking">
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="assets/logo-ut.png" alt="logo" class="logo-large">
+      <div class="brand-block">
+        <div class="brand">Tracking Pengiriman</div>
+        <div class="header-date" id="headerDate">—</div>
+      </div>
+    </div>
+    <div class="right">
+      <div id="userGreeting" class="greeting"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="stok.html">Informasi Bahan Ajar</a></li>
+        <li><a href="tracking.html">Tracking Pengiriman</a></li>
+        <li><a href="#">Laporan (Monitoring / Rekap)</a></li>
+        <li><a href="#" id="logoutLink">Keluar</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <div class="card">
+        <h2>Masukkan Nomor Delivery Order</h2>
+        <div class="form-row">
+          <input id="doInput" placeholder="Contoh: 2023001234">
+          <button id="searchDo" class="btn primary">Cari</button>
+        </div>
+        <div id="trackingResult" class="tracking-result hidden"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    (function(){
+      const el = document.getElementById('headerDate'); if(!el) return;
+      const d=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+      const m=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+      const n=new Date(); el.textContent=`${d[n.getDay()]}, ${n.getDate()} ${m[n.getMonth()]} ${n.getFullYear()}`;
+    })();
+  </script>
+</body>
+</html>
