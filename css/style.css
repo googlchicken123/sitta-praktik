@@ -85,11 +85,26 @@ label{display:block;margin-top:10px;margin-bottom:6px;font-weight:600}
 input[type="email"],input[type="password"],input,textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #ddd}
 .muted{margin-top:12px;text-align:center;color:var(--muted)}
 
+/* logo di dalam card login, center, ukuran asli */
+.page-login .login-card .logo{
+  display:block;
+  margin: 0 auto 12px; /* center + jarak bawah */
+  height:auto;
+  max-width:100%;      /* biar tdk melewati lebar kartu */
+}
+
+/* Tombol login center + jarak atas */
+.page-login .login-card .btn.primary {
+  display: block;         /* supaya mudah dicenter */
+  margin: 12px auto 0;    /* jarak atas 12px dan center horizontal */
+  width: 120px;           /* kasih lebar tetap agar rapi */
+  text-align: center;     /* pastikan teksnya di tengah */
+}
+
 /* override warna role hanya di Dashboard */
 .page-dashboard .topbar .greeting .muted {
   color: #dadada;  /* putih */
 }
-
 
 /* forms dan table */
 .centered{display:flex;align-items:center;justify-content:center;padding:40px}
