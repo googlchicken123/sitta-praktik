@@ -106,6 +106,7 @@ input[type="email"],input[type="password"],input,textarea{width:100%;padding:10p
   color: #dadada;  /* putih */
 }
 
+
 /* forms dan table */
 .centered{display:flex;align-items:center;justify-content:center;padding:40px}
 .content-small{max-width:720px;margin:40px auto}
