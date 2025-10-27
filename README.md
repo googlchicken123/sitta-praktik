@@ -26,27 +26,6 @@ Tugas Praktik 1 ini memiliki **tiga indikator penilaian utama**, yaitu:
 
 ---
 
-## Struktur Folder Project
-Pemrograman Berbasis Web/
-│
-├── index.html (halaman login)
-├── dashboard.html
-├── tracking.html
-├── stok.html
-├── css/
-│   └── style.css
-├── img/
-│   └── kepemimpinan.jpg 
-│   └── manajemen_keuangan.jpg 
-│   └── mikrobiologi.jpg 
-│   └── paud_perkembangan.jpeg 
-│   └── pengantar_komunikasi.jpg 
-├── js/
-│   └── script.js
-│   └── data.js 
-└── assets/
-    └── logo-ut.png
-
 ## Deskripsi Singkat
 Pada tugas ini, mahasiswa berfokus pada proses **Front-End** tanpa menggunakan **Back-End** terlebih dahulu.  
 Repository ini berisi struktur **static website** yang telah dikembangkan untuk mendukung alur pemesanan bahan ajar pada sistem SITTA Universitas Terbuka.
