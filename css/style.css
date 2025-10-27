@@ -101,11 +101,13 @@ input[type="email"],input[type="password"],input,textarea{width:100%;padding:10p
   text-align: center;     /* pastikan teksnya di tengah */
 }
 
+.page-login {
+  background: linear-gradient(90deg, #3389FE, #106fff);
+}
 /* override warna role hanya di Dashboard */
 .page-dashboard .topbar .greeting .muted {
   color: #dadada;  /* putih */
 }
-
 
 /* forms dan table */
 .centered{display:flex;align-items:center;justify-content:center;padding:40px}
@@ -137,3 +139,4 @@ input[type="email"],input[type="password"],input,textarea{width:100%;padding:10p
 .modal[aria-hidden="true"] { display:none; }
 .modal-content { background:#fff; padding:18px; border-radius:8px; max-width:480px; width:90%; position:relative; }
 .close { position:absolute; right:12px; top:8px; border:none; background:transparent; font-size:24px; cursor:pointer; }
+
