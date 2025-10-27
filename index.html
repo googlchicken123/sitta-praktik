@@ -7,26 +7,24 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="page-login">
-  <main class="login-container">
-    <!-- posisi logo nya UT di tengah atas form -->
+<main class="login-container">
+  <form id="loginForm" class="card login-card" novalidate>
     <img src="assets/logo-ut.png" alt="Logo UT" class="logo">
+    <h1>Masuk SITTA - UT</h1>
 
-    <form id="loginForm" class="card login-card" novalidate>
-      <h1>Masuk SITTA - UT</h1>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="email@ut.ac.id" required>
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="email@ut.ac.id" required>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="********" required>
 
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" placeholder="********" required>
+    <button type="submit" class="btn primary">Login</button>
 
-      <button type="submit" class="btn primary">Login</button>
-
-      <div class="muted">
-        <a href="#" id="forgotBtn">Lupa Password</a> • <a href="#" id="registerBtn">Daftar</a>
-      </div>
-    </form>
-  </main>
+    <div class="muted">
+      <a href="#" id="forgotBtn">Lupa Password</a> • <a href="#" id="registerBtn">Daftar</a>
+    </div>
+  </form>
+</main>
 
 <!-- modal simpel untuk Lupa Sandi / Daftar -->
 <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
